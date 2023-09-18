@@ -82,8 +82,12 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 
+" ack for ctr + shift + f
+Plugin 'mileszs/ack.vim'
+
 " NERDTree
 Plugin 'preservim/nerdtree'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -123,4 +127,12 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
   " Ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Ack Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
 endif
