@@ -1,0 +1,46 @@
+# Start message
+startup_message off 
+ 
+# hotkey win
+#bindkey ^[z prev
+#bindkey ^[x next
+#   for Xshell
+#bindkey ^5D prev 
+#bindkey ^5C next 
+#  for putty
+#bindkey ^[[D prev #ctrl + left   , move to previous window
+#bindkey ^[[C next # ctrl+ right , move to next window 
+#mac
+bindkey \033[5D prev #ctrl + left , move to previous window
+bindkey \033[5C next #ctrl+ right , move to next window
+
+# Status bar
+hardstatus on
+#hardstatus alwayslastline
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+
+#caption always "%{= kw}%-w%{= BW}%n %t%{-}%+w %-= @%H - %LD %d %LM - %c"
+
+# look and feel
+caption always "%{= bb}%{+b w}%h %=%{=b rw} %l %{= db} ${USER}@%H %{= dg}%c"
+hardstatus alwayslastline "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"
+
+# go to home dir
+chdir
+
+# Automatically detach on hangup. 
+autodetach on
+
+# Change default scrollback value for new windows
+defscrollback 10000
+
+# start with visual bell as default
+vbell on
+vbell_msg "bell on %t (%n)"
+
+activity "Activity in %t(%n)"
+
+shelltitle "shell"
+shell -$SHELL
+
+shell /bin/bash
