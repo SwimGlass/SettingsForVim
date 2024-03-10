@@ -88,6 +88,8 @@ Plugin 'mileszs/ack.vim'
 " NERDTree
 Plugin 'preservim/nerdtree'
 
+" taglist
+Plugin 'taglist.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -128,6 +130,18 @@ if executable('ag')
   " Ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Taglist Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let Tlist_Ctags_Cmd ='ctags'
+let Tlist_Show_One_File=1 "Do not display the tags of multiple files at the same time, only display the tags of the current file
+let Tlist_WinWidt=15 "Set the width of taglist
+let Tlist_Exit_OnlyWindow=1 "If the taglist window is the last window, exit vim
+let Tlist_Use_Right_Window=1
+let Tlist_Auto_Open=1
+let Tlist_Process_File_Always=1 "Taglist always parses the tags in the file, regardless of whether the taglist window is opened or not.
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

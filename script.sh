@@ -6,6 +6,9 @@ apt-get update
 #Install vim
 apt-get install vim -y
 
+#Install screen
+apt-get install screen -y
+
 #Install ctags
 apt-get install exuberant-ctags -y || apt-get install ctags -y
 
