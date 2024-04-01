@@ -1,25 +1,25 @@
 #!/bin/bash
 
 #Update source list
-apt-get update
+sudo apt-get update
 
 #Install vim
-apt-get install vim -y
+sudo apt-get install vim -y
 
 #Install screen
-apt-get install screen -y
+sudo apt-get install screen -y
 
 #Install ctags
-apt-get install exuberant-ctags -y || apt-get install ctags -y
+sudo apt-get install exuberant-ctags -y || sudo apt-get install ctags -y
 
 #Install cscope
-apt-get install cscope -y
+sudo apt-get install cscope -y
 
 #Install vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 #Install ack
-apt-get install ack -y
+sudo apt-get install ack -y
 
 cp ./.vimrc /"$(whoami)"
 
