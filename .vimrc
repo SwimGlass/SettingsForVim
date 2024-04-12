@@ -91,6 +91,9 @@ Plugin 'preservim/nerdtree'
 " taglist
 Plugin 'taglist.vim'
 
+" color scheme from  https://github.com/morhetz/gruvbox/wiki/Installation
+Plugin 'morhetz/gruvbox'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -149,4 +152,15 @@ let Tlist_Process_File_Always=1 "Taglist always parses the tags in the file, reg
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"gruvbox
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd vimenter * ++nested colorscheme gruvbox
+
+if &term =~ '256color'
+      " disable Background Color Erase (BCE) so that color schemes
+      " render properly when inside 256-color GNU screen.
+      set t_ut=
 endif
