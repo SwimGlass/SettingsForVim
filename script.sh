@@ -21,9 +21,12 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #Install ack
 sudo apt-get install ack -y
 
-cp ./.vimrc /"$(whoami)"
+echo "my home is $HOME"
 
-cd /"$(whoami)"
+cp ./.vimrc /"$HOME"
+cp ./.screenrc /"$HOME"
+
+cd /"$HOME"
 
 #Install vundle plugin
 vim +PluginInstall +qall
