@@ -23,10 +23,17 @@ sudo apt-get install ack -y
 
 echo "my home is $HOME"
 
-cp ./.vimrc /"$HOME"
-cp ./.screenrc /"$HOME"
+cp ./.vimrc $HOME
+cp ./.screenrc $HOME
 
-cd /"$HOME"
+if [[ $1 == "roku" ]]; then
+    echo "Using .gitconfig_roku ......"
+    cp ./.gitconfig_roku "$HOME"/.gitconfig
+else
+    echo "Using .gitconfig ..........."
+    cp ./.gitconfig "$HOME"/.gitconfig
+fi
+cd "$HOME"
 
 #Install vundle plugin
 vim +PluginInstall +qall

@@ -1,0 +1,5 @@
+[user]
+	name = Derek Hsieh
+    email = dhsieh@roku.com
+[alias]
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
