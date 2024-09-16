@@ -1,5 +1,16 @@
 [user]
-	name = swimglass
+	name = SwimGlass
     email = swimmingglasses@gmail.com
 [alias]
-    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+    t = log --graph --decorate --pretty=oneline --abbrev-commit
+# format 
+# %C([Color])([things to print])%Creset
+# %n    newline
+# %H    commit hash
+# %h    abbreviated commit hash
+# %an   author name
+# %cs   committer date, short format (YYYY-MM-DD)
+# %cr   committer date, relative time until now
+# %an   author name
+    lt = log --graph --pretty=format:\"%C(auto)%h%Creset %C(cyan)(%cs %cr)%Creset %C(auto,blue)(%aN)%Creset %s\" --abbrev-commit --decorate
+
